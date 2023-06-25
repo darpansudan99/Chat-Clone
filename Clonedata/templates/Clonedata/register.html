@@ -1,0 +1,61 @@
+{% extends "Clonedata/navbar.html" %}
+{% load static %}
+
+{% block title %} Register {% endblock %}
+
+{%load static%}
+{% block stylelink %} <link href="{% static 'Clonedata/register.css' %}" rel="stylesheet"> {% endblock %}
+
+{% block body %}
+
+    <div class="Registrationcontainer">
+
+        <div class="Registration_tile"> 
+
+            <h2 class="h1title">Register</h2>
+            <p style="color:#7E7E7E">Please fill this form to create a account!</p>
+            <br>
+
+            {% if message %}
+                <div class="alert alert-danger">{{ message }}</div>
+            {% endif %}
+                {% csrf_token %}
+                <div class="form-group">
+                    <input class="form-control" autofocus type="text" name="username" placeholder="Username" required>
+                </div>
+                <div class="form-group">
+                    <input class="form-control" type="email" name="email" placeholder="Email Address" required>
+                </div>
+
+                <div class="name">
+                    <div class="form-group">
+                        <select class="form-control" name="gender" id="gender" required>
+                            <option value="M">Male</option>
+                            <option value="F">Female</option>
+                            <option value="O">Other</option>
+                        </select>
+                    </div>
+                </div>
+                
+                <div class="form-group">
+                    <input class="form-control" type="number" name="phone_no" placeholder="Phone Number" required>
+                </div>
+                
+                <div class="form-group">
+                    <input class="form-control" type="password" name="password" placeholder="Password" required>
+                </div>
+                <div class="form-group">
+                    <input class="form-control" type="password" name="confirmation" placeholder="Confirm Password" required>
+                </div>
+                <input class="btn btn-info" type="submit" value="Register" id="reg1">
+            
+
+            <div class="alert alert-dark">
+                Already have an account? <a class="alert-link" href="{% url 'login' %}">Log In here.</a>
+            </div>
+        
+        </div>
+
+    </div>
+
+{% endblock %}

@@ -76,10 +76,9 @@ object {
 
 /* navbar.css */
 #navbar {
-  background-color: rgb(225 29 72);
+  background-color:dimgray;
   overflow: hidden; 
   display: flex;
-  box-shadow: inset;
   border-radius: 10px;
 }
 
@@ -121,13 +120,9 @@ object {
   margin-left: 30px;
 }
 
-.navbar-links a:hover {
-  background-color: #111;
-}
-
 /*navbar ends */
 
-
+/*Index*/
 
 .index-body {
   margin-top: 3rem;
@@ -151,13 +146,6 @@ object {
   line-height: 2.25rem;
 }
 
-.paragraph {
-  font-size: 1.125rem;
-  line-height: 1.75rem;
-  --tw-text-opacity: 1;
-  color: rgb(107 114 128 / var(--tw-text-opacity));
-}
-
 .col-span-2 {
   grid-column: span 2 / span 2;
 }
@@ -167,3 +155,140 @@ object {
   margin-left: 10%;
 }
 
+.button {
+  background-color: #4CAF50;
+  border: none;
+  color: white;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+}
+
+/*login*/
+
+#logincontainer {
+  margin-left: 15%;
+  margin-right: 0;
+  padding: 0;
+  display: flex;
+  flex-flow: row wrap;
+}
+
+.logincard {
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.1), 0 6px 20px 0 rgba(0, 0, 0, 0.1);
+  border : 2px solid grey;
+  border-radius: 20px;
+  padding: 20px;
+  padding-left: 25px;
+  width: auto;
+  margin-top: 100px;
+  max-height: 355px;
+}
+
+
+
+.htitle {
+  font-size: 2.5rem;
+  font-weight: 500;
+  border-radius: 10%;
+  margin: 0%;
+}
+
+/* .name > .form-group > .form-control {
+  width: 240px; */
+
+.form-group {
+  text-align: left !important;
+  align-items: center;
+  border: #232323;
+  width: 240px;
+}
+.form-control {
+  max-width: 500px;
+}
+
+a, a:hover, a:focus, a:active, a:visited {
+  color: black
+}
+
+#btn {
+  background-color: #232323;
+  color: aliceblue;
+  margin-left: 10%;
+  margin: 10px;
+}
+
+#loginimage {
+  padding-left: 8%;
+  width: 40%;
+  margin-top: 100px;
+  margin-left: 5%;
+}
+
+@media screen and (max-width: 700px) {
+  #loginimage {
+      display: none;
+  }
+}
+
+
+/* Register */
+/* body {
+  background-image: url("././images/bg.png");
+  background-size: 100% 100% ;
+} */
+
+.Registrationcontainer {
+  background-image: url("/Clonedata/static/images/bg.png");
+  background-size: 100% 100% ;
+  margin: 20px;
+  margin-left: 9%;
+  margin-right: 9%;
+  display: flex;
+  flex-flow: row wrap;
+}
+
+.Registration_tile {
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.1), 0 6px 20px 0 rgba(0, 0, 0, 0.1);
+  border : 2px solid grey;
+  border-radius: 20px;
+  padding: 25px;
+  padding-left: 45px;
+  margin-top: 30px;
+  width: 600px;
+  background-color: white;
+  align-items: center;
+}
+
+.name > .form-group > .form-control {
+  width: 240px;
+}
+
+#firstname, #dob {
+  margin-right: 20px ;
+}
+
+.name {
+  display: flex;
+  flex-flow: row wrap;
+}
+
+#Registerimage {
+  width: 45%;
+  height: 45%;
+}
+
+#hospitaltile {
+  padding-left: 25px;
+}
+
+#reg2, #reg1 {
+  background-color: #232323;
+  color: aliceblue;
+}
+
+a, a:hover, a:focus, a:active, a:visited {
+  color: black
+}

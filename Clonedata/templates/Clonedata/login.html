@@ -1,0 +1,36 @@
+{% extends "Clonedata/navbar.html" %}
+{% load static %}
+
+{% block title %} Login {% endblock %}
+
+
+
+{% block body %}
+
+    
+<div  id="logincontainer">
+    <div class="logincard">
+        <br>
+        <h5 class="htitle">Login</h5>
+        <br>
+
+        <form action="{% url 'login' %}" method="POST">
+            {% csrf_token %}
+            <div class="form-group">
+                <input autofocus  class="form-control" type="text" name="username" placeholder="Username">
+            </div>
+            <div class="form-group">
+                <input class="form-control" type="password" name="password" placeholder="Password">
+            </div>
+            <input id="btn" type="submit" value="Login">
+        </form>
+
+        <br>
+        <div class="center">Don't have an account? <a href="{% url 'register' %}">Register here.</a></div>
+
+    </div>
+
+    <img src="https://image.freepik.com/free-vector/sign-concept-illustration_114360-5475.jpg" id="loginimage"> 
+</div>
+
+{% endblock %}
